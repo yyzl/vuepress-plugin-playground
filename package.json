@@ -1,0 +1,9 @@
+{
+  "name": "vuepress-playground",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "vuepress": "^1.0.0-alpha.35"
+  }
+}
