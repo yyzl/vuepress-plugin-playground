@@ -4,15 +4,17 @@
   "main": "lib/index.js",
   "license": "MIT",
   "scripts": {
-    "start": "vuepress dev",
-    "build": "vuepress build --no-cache"
+    "start": "npx vuepress dev",
+    "build": "npx vuepress build --no-cache"
   },
   "author": {
     "name": "wemlion",
     "email": "angusfu1126@qq.com"
   },
   "devDependencies": {
-    "standard-version": "^4.4.0",
+    "standard-version": "^4.4.0"
+  },
+  "peerDependencies": {
     "vuepress": "^1.0.0-alpha.35"
   },
   "repository": {
