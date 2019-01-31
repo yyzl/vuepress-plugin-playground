@@ -14,5 +14,16 @@
   "devDependencies": {
     "standard-version": "^4.4.0",
     "vuepress": "^1.0.0-alpha.35"
-  }
+  },
+  "files": [
+    "./lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AngusFu/vuepress-plugin-playground.git"
+  },
+  "bugs": {
+    "url": "https://github.com/AngusFu/vuepress-plugin-playground/issues"
+  },
+  "homepage": "https://github.com/AngusFu/vuepress-plugin-playground#readme"
 }
