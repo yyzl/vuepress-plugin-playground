@@ -1,39 +1,87 @@
----
-sidebar: auto
----
+# Vuepress Playground Plugin
 
-# Demo Playground
+::: warning
+According to the [SFC Spec](https://vue-loader.vuejs.org/spec.html#script), "each \*.vue file can contain at most one \<script\> block at a time."
 
-::: tip 说明
-用于学习《交互式计算机图形学》练习。
+Please DO NOT use `<script>` tags in your markdown file for importing or declaring purposes.
 :::
 
-## 第二章
+## Install
 
-```html{2}
-@playground
-<template>
-  <h1>Hello world</h1>
-</template>
+```bash
+npm install -D vuepress-plugin-playground
 ```
 
-```html{2}
-@playground
-<template>
-  <h1>Hello world</h1>
-</template>
+```js
+// in your .vuepress/config.js
+module.exports = {
+  plugins: [require('vuepress-plugin-playground')]
+}
 ```
 
-```html{2}
+## Usage
+
+Write SFC-styled code in a [fenced code block](https://spec.commonmark.org/0.28/#fenced-code-blocks) with `lang` attr being `vue` or `html`.
+
+Put a `@playground` declaration to the very begining of your code, and that code block would be treated as a real SFC file.
+
+<!-- prettier-ignore -->
+~~~html {2}
+```html
 @playground
 <template>
-  <h1>Hello world</h1>
+  ...
 </template>
+
+<script>
+  export default {}
+</script>
+
+<style>
+  /* Your CSS code here */
+</style>
+```
+~~~
+
+Following is a counter example:
+
+```html
+@playground
+<template>
+  <button @click="count++">You clicked me {{ count }} times.</button>
+</template>
+
+<script>
+  export default {
+    data() {
+      return { count: 0 }
+    }
+  }
+</script>
+
+<style>
+  button {
+    line-height: 2;
+    font-size: 14px;
+    padding: 0 1em;
+  }
+</style>
 ```
 
-```html{2}
-@playground
-<template>
-  <h1>Hello world</h1>
-</template>
-```
+## Style
+
+You can add your own CSS using selectors like `.playground` `.stage`.
+
+SEE following structure:
+
+- `<div class="playground">`
+
+  - `<div class="stage">`
+
+    - `<InlinePlayground />`(Live demo)
+
+  - `<div class="language-html">`(highlighted results)
+
+## TODO
+
+- integration with codesandbox/codepen
