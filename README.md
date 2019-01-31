@@ -27,9 +27,9 @@ module.exports = {
 
 ## Usage
 
-Write SFC-styled code in a [fenced code block](https://spec.commonmark.org/0.28/#fenced-code-blocks) with `lang` attr being `vue` or `html`.
+You can write SFC-styled code in a [fenced code block](https://spec.commonmark.org/0.28/#fenced-code-blocks) with `lang` attr being `vue` or `html`.
 
-Put a `@playground` declaration to the very begining of your code, and that code block would be treated as a real SFC file.
+Put a `@playground` annotation to the very begining of your code, and that code block would be treated as a real SFC file.
 
 <!-- prettier-ignore -->
 ~~~html {2}
@@ -84,6 +84,20 @@ Following is a counter example:
 </style>
 ```
 
+## Import Code Snippets
+
+By adding a `@playground` annotation on the top of your `.vue` file, you can import code snippets via following syntax:
+
+```
+<<< @/.vuepress/snippets/test.vue
+```
+
+(SEE [vuepress doc](https://vuepress.vuejs.org/guide/markdown.html#import-code-snippets))
+
+Result:
+
+<<< @/.vuepress/snippets/test.vue
+
 ## Customizing Styles
 
 You can add your own CSS using selectors like `.playground` `.stage`.
@@ -101,5 +115,3 @@ SEE following structure:
 ## TODO
 
 - integration with codesandbox/codepen
-
-- support for SFC
