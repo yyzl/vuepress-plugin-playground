@@ -16,7 +16,7 @@
     "vuepress": "^1.0.0-alpha.35"
   },
   "files": [
-    "./lib"
+    "./lib/*.js"
   ],
   "repository": {
     "type": "git",
