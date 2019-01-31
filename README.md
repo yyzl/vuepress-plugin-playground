@@ -65,7 +65,7 @@ Following is a counter example:
 <script>
   // for imports, please use `@cwd/` (your project root),
   // relative paths are NOT supported yet.
-  // of course, You can also set your own webpack alias.
+  // of course, you can also use your own webpack aliases.
   import LinesComponent from '@cwd/.vuepress/snippets/lines.vue'
 
   export default {
