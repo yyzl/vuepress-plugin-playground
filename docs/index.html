@@ -7,8 +7,8 @@
     <meta name="description" content="">
     
     
-    <link rel="preload" href="/vuepress-plugin-playground/assets/css/0.styles.2fcfc3e2.css" as="style"><link rel="preload" href="/vuepress-plugin-playground/assets/js/app.54d1c2b8.js" as="script"><link rel="preload" href="/vuepress-plugin-playground/assets/js/2.5f3d2709.js" as="script"><link rel="preload" href="/vuepress-plugin-playground/assets/js/5.bc7e60b3.js" as="script"><link rel="prefetch" href="/vuepress-plugin-playground/assets/js/3.38aa74ac.js"><link rel="prefetch" href="/vuepress-plugin-playground/assets/js/4.fdd180a5.js"><link rel="prefetch" href="/vuepress-plugin-playground/assets/js/6.e030b35e.js"><link rel="prefetch" href="/vuepress-plugin-playground/assets/js/7.f54a46d8.js">
-    <link rel="stylesheet" href="/vuepress-plugin-playground/assets/css/0.styles.2fcfc3e2.css">
+    <link rel="preload" href="/vuepress-plugin-playground/assets/css/0.styles.bf013cf9.css" as="style"><link rel="preload" href="/vuepress-plugin-playground/assets/js/app.d9d6613b.js" as="script"><link rel="preload" href="/vuepress-plugin-playground/assets/js/2.a459a5c3.js" as="script"><link rel="preload" href="/vuepress-plugin-playground/assets/js/3.b6d03c71.js" as="script"><link rel="prefetch" href="/vuepress-plugin-playground/assets/js/4.cb63394d.js"><link rel="prefetch" href="/vuepress-plugin-playground/assets/js/5.5c0b4f29.js"><link rel="prefetch" href="/vuepress-plugin-playground/assets/js/6.7b6173b7.js"><link rel="prefetch" href="/vuepress-plugin-playground/assets/js/7.b7c466df.js">
+    <link rel="stylesheet" href="/vuepress-plugin-playground/assets/css/0.styles.bf013cf9.css">
   </head>
   <body>
     <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/vuepress-plugin-playground/" class="home-link router-link-exact-active router-link-active"><!----> <span class="site-name">Vuepress Playground Plugin</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"> <a href="https://github.com/AngusFu/vuepress-plugin-playground" target="_blank" rel="noopener noreferrer" class="repo-link">
@@ -34,26 +34,38 @@ module<span class="token punctuation">.</span>exports <span class="token operato
   <span class="token comment">/* Your CSS code here */</span>
 </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
 ```
-</code></pre></div><p>Following is a counter example:</p> <div class="playground"><div class="stage"><button>You clicked me 0 times.</button></div><div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">&gt;</span></span>
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">@click</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>count++<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>You clicked me {{ count }} times.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><p>Following is a counter example:</p> <div class="playground"><div class="stage"><button class="button_2TyB6Q4j" data-v-4321107a>
+  You clicked me 0 times.
+</button></div><div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">@click</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>count++<span class="token punctuation">&quot;</span></span> <span class="token attr-name">:class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>$style.button<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    You clicked me {{ count }} times.
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
 
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script language-javascript">
   <span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
     <span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
       <span class="token keyword">return</span> <span class="token punctuation">{</span> count<span class="token punctuation">:</span> <span class="token number">0</span> <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token function">mounted</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
   <span class="token punctuation">}</span>
 </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
 
+<span class="token comment">&lt;!-- Notice that style tags are ALWAYS treated as scoped --&gt;</span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">&gt;</span></span><span class="token style language-css">
   <span class="token selector">button</span> <span class="token punctuation">{</span>
     <span class="token property">line-height</span><span class="token punctuation">:</span> 2<span class="token punctuation">;</span>
-    <span class="token property">font-size</span><span class="token punctuation">:</span> 14px<span class="token punctuation">;</span>
     <span class="token property">padding</span><span class="token punctuation">:</span> 0 1em<span class="token punctuation">;</span>
   <span class="token punctuation">}</span>
 </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
-</code></pre></div></div><h2 id="style"><a href="#style" aria-hidden="true" class="header-anchor">#</a> Style</h2> <p>You can add your own CSS using selectors like <code>.playground</code> <code>.stage</code>.</p> <p>SEE following structure:</p> <ul><li><p><code>&lt;div class=&quot;playground&quot;&gt;</code></p> <ul><li><p><code>&lt;div class=&quot;stage&quot;&gt;</code></p> <ul><li><code>&lt;InlinePlayground /&gt;</code>(Live demo)</li></ul></li> <li><p><code>&lt;div class=&quot;language-html&quot;&gt;</code>(highlighted results)</p></li></ul></li></ul> <h2 id="todo"><a href="#todo" aria-hidden="true" class="header-anchor">#</a> TODO</h2> <ul><li>integration with codesandbox/codepen</li></ul></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
-    <script src="/vuepress-plugin-playground/assets/js/app.54d1c2b8.js" defer></script><script src="/vuepress-plugin-playground/assets/js/2.5f3d2709.js" defer></script><script src="/vuepress-plugin-playground/assets/js/5.bc7e60b3.js" defer></script>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span> <span class="token attr-name">module</span> <span class="token attr-name">scoped</span><span class="token punctuation">&gt;</span></span><span class="token style language-css">
+  <span class="token selector">.button</span> <span class="token punctuation">{</span>
+    <span class="token property">font-size</span><span class="token punctuation">:</span> 14px<span class="token punctuation">;</span>
+    <span class="token property">font-weight</span><span class="token punctuation">:</span> bold<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div></div><h2 id="customizing-styles"><a href="#customizing-styles" aria-hidden="true" class="header-anchor">#</a> Customizing Styles</h2> <p>You can add your own CSS using selectors like <code>.playground</code> <code>.stage</code>.</p> <p>SEE following structure:</p> <ul><li><p><code>&lt;div class=&quot;playground&quot;&gt;</code></p> <ul><li><p><code>&lt;div class=&quot;stage&quot;&gt;</code></p> <ul><li><code>&lt;InlinePlayground /&gt;</code>(Live demo)</li></ul></li> <li><p><code>&lt;div class=&quot;language-html&quot;&gt;</code>(highlighted results)</p></li></ul></li></ul> <h2 id="todo"><a href="#todo" aria-hidden="true" class="header-anchor">#</a> TODO</h2> <ul><li>integration with codesandbox/codepen</li></ul></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/vuepress-plugin-playground/assets/js/app.d9d6613b.js" defer></script><script src="/vuepress-plugin-playground/assets/js/2.a459a5c3.js" defer></script><script src="/vuepress-plugin-playground/assets/js/3.b6d03c71.js" defer></script>
   </body>
 </html>
