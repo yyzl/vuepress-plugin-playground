@@ -51,16 +51,25 @@ Put a `@playground` annotation to the very begining of your code, and that code 
 
 Following is a counter example:
 
-```html {16}
+```html {14,25}
 @playground
 <template>
-  <button @click="count++" :class="$style.button">
-    You clicked me {{ count }} times.
-  </button>
+  <div>
+    <button @click="count++" :class="$style.button">
+      You clicked me {{ count }} times.
+    </button>
+    <lines-component :count="count" />
+  </div>
 </template>
 
 <script>
+  // for imports, please use `@cwd/` (your project root),
+  // relative paths are NOT supported yet.
+  // of course, You can also set your own webpack alias.
+  import LinesComponent from '@cwd/.vuepress/snippets/lines.vue'
+
   export default {
+    components: { LinesComponent },
     data() {
       return { count: 0 }
     },
