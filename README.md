@@ -51,7 +51,7 @@ Put a `@playground` declaration to the very begining of your code, and that code
 
 Following is a counter example:
 
-```html
+```html {16}
 @playground
 <template>
   <button @click="count++" :class="$style.button">
@@ -101,3 +101,5 @@ SEE following structure:
 ## TODO
 
 - integration with codesandbox/codepen
+
+- support for SFC
