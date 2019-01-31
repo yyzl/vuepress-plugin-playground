@@ -54,27 +54,37 @@ Following is a counter example:
 ```html
 @playground
 <template>
-  <button @click="count++">You clicked me {{ count }} times.</button>
+  <button @click="count++" :class="$style.button">
+    You clicked me {{ count }} times.
+  </button>
 </template>
 
 <script>
   export default {
     data() {
       return { count: 0 }
-    }
+    },
+    mounted() {}
   }
 </script>
 
+<!-- Notice that style tags are ALWAYS treated as scoped -->
 <style>
   button {
     line-height: 2;
-    font-size: 14px;
     padding: 0 1em;
+  }
+</style>
+
+<style module scoped>
+  .button {
+    font-size: 14px;
+    font-weight: bold;
   }
 </style>
 ```
 
-## Style
+## Customizing Styles
 
 You can add your own CSS using selectors like `.playground` `.stage`.
 
