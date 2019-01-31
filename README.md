@@ -8,6 +8,10 @@ According to the [SFC Spec](https://vue-loader.vuejs.org/spec.html#script), "eac
 Please DO NOT use `<script>` tags in your markdown file for importing or declaring purposes.
 :::
 
+## Example
+
+Take a look at [demo](https://github.com/AngusFu/webgl-guide-reading).
+
 ## Install
 
 ```bash
