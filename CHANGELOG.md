@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.1.2"></a>
+## [1.1.2](https://github.com/AngusFu/vuepress-plugin-playground/compare/v1.1.0...v1.1.2) (2019-02-01)
+
+
+### Bug Fixes
+
+* use hash instead of id for demos ([ee0cb71](https://github.com/AngusFu/vuepress-plugin-playground/commit/ee0cb71))
+
+
+
 <a name="1.1.1"></a>
 ## [1.1.1](https://github.com/AngusFu/vuepress-plugin-playground/compare/v1.1.0...v1.1.1) (2019-02-01)
 
