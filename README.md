@@ -107,7 +107,7 @@ Result:
 
 <<< @/.vuepress/snippets/test.vue
 
-## Customizing Styles
+## Customize Styles
 
 You can add your own CSS using selectors like `.playground` `.stage`.
 
