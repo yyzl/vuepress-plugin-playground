@@ -33,7 +33,7 @@ module.exports = {
 
 You can write SFC-styled code in a [fenced code block](https://spec.commonmark.org/0.28/#fenced-code-blocks) with `lang` attr being `vue` or `html`.
 
-Put a `@playground` annotation to the very begining of your code, and that code block would be treated as a real SFC file.
+Put a `@playground` annotation (or `@demo`, which is shorter) to the very begining of your code, and that code block would be treated as a real SFC file.
 
 <!-- prettier-ignore -->
 ~~~html {2}
@@ -99,7 +99,7 @@ Following is a counter example:
 
 ## Import Code Snippets
 
-By adding a `@playground` annotation on the top of your `.vue` file, you can import code snippets via following syntax:
+By adding a `@playground` or `@demo` annotation on the top of your `.vue` file, you can import code snippets via following syntax:
 
 ```
 <<< @/.vuepress/snippets/test.vue
