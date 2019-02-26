@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.3.0"></a>
+# [1.3.0](https://github.com/AngusFu/vuepress-plugin-playground/compare/v1.2.0...v1.3.0) (2019-02-26)
+
+
+### Features
+
+* support `@demo` annotation ([c2a5144](https://github.com/AngusFu/vuepress-plugin-playground/commit/c2a5144))
+
+
+
 <a name="1.2.0"></a>
 # [1.2.0](https://github.com/AngusFu/vuepress-plugin-playground/compare/v1.1.2...v1.2.0) (2019-02-26)
 
@@ -32,7 +42,7 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### Features
 
-* add `[@cwd](https://github.com/cwd)` alias for imports in demos ([f222bf8](https://github.com/AngusFu/vuepress-plugin-playground/commit/f222bf8))
+* add `@cwd` alias for imports in demos ([f222bf8](https://github.com/AngusFu/vuepress-plugin-playground/commit/f222bf8))
 
 
 
