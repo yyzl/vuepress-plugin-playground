@@ -1,3 +1,7 @@
+---
+sidebar: auto
+---
+
 # Vuepress Playground Plugin
 
 [![npm status](https://img.shields.io/npm/v/vuepress-plugin-playground.svg)](https://www.npmjs.org/package/vuepress-plugin-playground)
@@ -106,6 +110,29 @@ By adding a `@playground` annotation on the top of your `.vue` file, you can imp
 Result:
 
 <<< @/.vuepress/snippets/test.vue
+
+## Display Without Source Code
+
+Add a `demo-only` attribute onto your `<template>` tag ——
+
+<!-- prettier-ignore -->
+~~~html {3}
+```html
+@playground
+<template demo-only>
+  <h3>Source code is missing~</h3>
+</template>
+```
+~~~
+
+Here is the result ——
+
+```html
+@playground
+<template demo-only>
+  <h3>Source code is missing...</h3>
+</template>
+```
 
 ## Customize Styles
 

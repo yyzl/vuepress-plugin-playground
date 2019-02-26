@@ -1,0 +1,48 @@
+.source-toggle-checkbox {
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+  cursor: pointer;
+}
+
+.source-toggle-label > label {
+  position: relative;
+  display: block;
+  font-size: 13px;
+  line-height: 3;
+  text-align: center;
+  background: #fafafa;
+  cursor: pointer;
+  user-select: none;
+}
+
+.source-toggle-label > label:hover {
+  color: #2196f3;
+  background: #eff3f6;
+}
+
+.source-toggle-label > label::after {
+  content: '⇓ Display source code';
+}
+
+.source-toggle-checkbox:checked + .source-toggle-label > label::after {
+  content: '⇑ Hide source code';
+}
+
+:lang(zh) .source-toggle-label > label::after {
+  content: '⇓ 显示代码';
+}
+
+:lang(zh)
+  .source-toggle-checkbox:checked
+  + .source-toggle-label
+  > label::after {
+  content: '⇑ 隐藏代码';
+}
+
+.source-toggle-checkbox ~ div[class*='language-'] {
+  display: none;
+}
+
+.source-toggle-checkbox:checked ~ div[class*='language-'] {
+  display: block;
+}

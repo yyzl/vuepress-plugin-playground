@@ -15,7 +15,7 @@
     "standard-version": "^4.4.0"
   },
   "peerDependencies": {
-    "vuepress": "^1.0.0-alpha.35"
+    "vuepress": "^1.0.0-alpha.39"
   },
   "repository": {
     "type": "git",
