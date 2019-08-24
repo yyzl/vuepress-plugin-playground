@@ -1,4 +1,9 @@
-@playground
 <template>
-  <div>Test</div>
+  <div>{{ msg }}</div>
 </template>
+
+<script>
+export default {
+  data: () => ({ msg: 'Hello Vuepress!' })
+}
+</script>
