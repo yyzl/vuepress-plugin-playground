@@ -33,12 +33,14 @@ module.exports = {
 
 You can write SFC-styled code in a [fenced code block](https://spec.commonmark.org/0.28/#fenced-code-blocks) with `lang` attr being `vue` or `html`.
 
-Put a `@playground` annotation (or `@demo`, which is shorter) to the very begining of your code, and that code block would be treated as a real SFC file.
+Put a `@demo` annotation in your code block, and it would be treated as a real SFC file:
+
+- <code>\`\`\`vue @demo</code>
+- <code>\`\`\`html @demo</code>
 
 <!-- prettier-ignore -->
 ~~~html {2}
-```html
-@playground
+```html @demo
 <template>
   ...
 </template>
@@ -55,8 +57,7 @@ Put a `@playground` annotation (or `@demo`, which is shorter) to the very begini
 
 Following is a counter example:
 
-```html {14,25}
-@playground
+```html @demo {11}
 <template>
   <div>
     <button @click="count++" :class="$style.button">
@@ -67,15 +68,13 @@ Following is a counter example:
 </template>
 
 <script>
-  // for imports, please use `@cwd/` (your project root),
-  // relative paths are NOT supported yet.
-  // of course, you can also use your own webpack aliases.
-  import LinesComponent from '@cwd/.vuepress/snippets/lines.vue'
+  // DO NOT recommand importing external resources
+  import LinesComponent from './.vuepress/snippets/lines.vue'
 
   export default {
     components: { LinesComponent },
     data() {
-      return { count: 0 }
+      return { count: 1 }
     },
     mounted() {}
   }
@@ -97,57 +96,60 @@ Following is a counter example:
 </style>
 ```
 
-## Import Code Snippets
-
-By adding a `@playground` or `@demo` annotation on the top of your `.vue` file, you can import code snippets via following syntax:
-
-```
-<<< @/.vuepress/snippets/test.vue
-```
-
-(SEE [vuepress doc](https://vuepress.vuejs.org/guide/markdown.html#import-code-snippets))
-
-Result:
-
-<<< @/.vuepress/snippets/test.vue
-
 ## Display Without Source Code
 
-Add a `demo-only` attribute onto your `<template>` tag ——
+Use the `@effect-only` annotation ——
 
 <!-- prettier-ignore -->
-~~~html {3}
-```html
-@playground
-<template demo-only>
-  <h3>Source code is missing~</h3>
+~~~html {1}
+```html @effect-only
+<template>
+  <h3>Source code is gone~</h3>
 </template>
 ```
 ~~~
 
 Here is the result ——
 
-```html
-@playground
-<template demo-only>
-  <h3>Source code is missing...</h3>
+```html @effect-only
+<template>
+  <h3>Source code is gone...</h3>
 </template>
 ```
 
+## Import Code Snippets
+
+You can import code snippets via following syntax:
+
+```{1,2}
+<<< @/.vuepress/snippets/test.vue @demo {1,2}
+<<< @/.vuepress/snippets/test.vue @effect-only
+```
+
+(SEE [vuepress doc](https://vuepress.vuejs.org/guide/markdown.html#import-code-snippets))
+
+Result:
+
+<<< @/.vuepress/snippets/test.vue @demo {1,2}
+
+<<< @/.vuepress/snippets/test.vue @effect-only
+
 ## Customize Styles
 
-You can add your own CSS using selectors like `.playground` `.stage`.
+```xml
+<GlobalCustomStage :source="source">
+  <slot name="name">
+  <slot name="code">
+</GlobalCustomStage>
+```
 
-SEE following structure:
-
-- `<div class="playground">`
-
-  - `<div class="stage">`
-
-    - `<InlinePlayground />`(Live demo)
-
-  - `<div class="language-html">`(highlighted results)
+- `source.vue`
+- `source.template`
+- `source.templateAttrs`
+- `source.script`
+- `source.scriptAttrs`
+- `source.styleAttrs`
 
 ## TODO
 
-- integration with codesandbox/codepen
+- [] Integration with codesandbox/codepen/jsbin
