@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "start": "npx vuepress dev --no-clear-screen",
-    "build": "npx vuepress build --no-cache --no-clear-screen"
+    "build": "npx vuepress build --no-cache"
   },
   "author": {
     "name": "wemlion",

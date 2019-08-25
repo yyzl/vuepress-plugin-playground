@@ -60,7 +60,7 @@ Following is a counter example:
 ```html @demo {11}
 <template>
   <button @click="count++" :class="$style.button">
-    Clicked: {{ count }} times.
+    Clicked: {{ count + 1 }} times.
   </button>
 </template>
 
@@ -130,6 +130,7 @@ Here is the result ——
 </style>
 ```
 
+<!--
 ## Import Code Snippets
 
 You can import code snippets via following syntax:
@@ -145,7 +146,7 @@ Result:
 
 <<< @/.vuepress/snippets/test.vue @demo {1,2}
 
-<<< @/.vuepress/snippets/test.vue @effect-only
+<<< @/.vuepress/snippets/test.vue @effect-only -->
 
 ## Customize Styles
 
