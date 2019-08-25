@@ -6,7 +6,7 @@ module.exports = {
     [
       require('../lib'),
       {
-        componentTag: 'playground-custom'
+        componentTag: 'CustomStage'
       }
     ]
   ],

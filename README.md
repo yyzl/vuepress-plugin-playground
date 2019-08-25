@@ -59,28 +59,20 @@ Following is a counter example:
 
 ```html @demo {11}
 <template>
-  <div>
-    <button @click="count++" :class="$style.button">
-      You clicked me {{ count }} times.
-    </button>
-    <lines-component :count="count" />
-  </div>
+  <button @click="count++" :class="$style.button">
+    Clicked: {{ count + 1 }} times.
+  </button>
 </template>
 
 <script>
-  // DO NOT recommand importing external resources
-  import LinesComponent from './.vuepress/snippets/lines.vue'
-
   export default {
-    components: { LinesComponent },
     data() {
       return { count: 1 }
-    },
-    mounted() {}
+    }
   }
 </script>
 
-<!-- Notice that style tags are ALWAYS treated as scoped -->
+<!-- Notice: styles are ALWAYS treated as scoped -->
 <style>
   button {
     line-height: 2;
@@ -103,18 +95,39 @@ Use the `@effect-only` annotation ——
 <!-- prettier-ignore -->
 ~~~html {1}
 ```html @effect-only
-<template>
-  <h3>Source code is gone~</h3>
-</template>
-```
 ~~~
 
 Here is the result ——
 
 ```html @effect-only
 <template>
-  <h3>Source code is gone...</h3>
+  <button @click="count++" :class="$style.button">
+    Clicked: {{ count }} times.
+  </button>
 </template>
+
+<script>
+  export default {
+    data() {
+      return { count: 1 }
+    }
+  }
+</script>
+
+<!-- Notice: styles are ALWAYS treated as scoped -->
+<style>
+  button {
+    line-height: 2;
+    padding: 0 1em;
+  }
+</style>
+
+<style module scoped>
+  .button {
+    font-size: 12px;
+    font-weight: bold;
+  }
+</style>
 ```
 
 ## Import Code Snippets
@@ -136,12 +149,24 @@ Result:
 
 ## Customize Styles
 
+Define a gloabl component, `<CustomStage />` for example:
+
 ```xml
-<GlobalCustomStage :source="source">
-  <slot name="name">
-  <slot name="code">
-</GlobalCustomStage>
+<template>
+  <some-tag>
+    <slot name="demo">
+    <slot name="code">
+  </some-tag>
+</template>
+
+<script>
+  export default {
+    props: ['source']
+  }
+</script>
 ```
+
+::: tip props.source
 
 - `source.vue`
 - `source.template`
@@ -149,6 +174,22 @@ Result:
 - `source.script`
 - `source.scriptAttrs`
 - `source.styleAttrs`
+  :::
+
+Then configure in your `.vuepress/config.js`:
+
+```js
+module.exports = {
+  plugins: [
+    [
+      require('vuepress-plugin-playground'),
+      {
+        componentTag: 'CustomStage'
+      }
+    ]
+  ]
+}
+```
 
 ## TODO
 
