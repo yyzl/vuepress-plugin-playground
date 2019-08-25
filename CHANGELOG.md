@@ -6,6 +6,24 @@ All notable changes to this project will be documented in this file. See [standa
 # [2.0.0](https://github.com/AngusFu/vuepress-plugin-playground/compare/v1.2.0...v2.0.0) (2019-08-25)
 
 
+### Bug Fixes
+
+* remove unused require ([8a4b854](https://github.com/AngusFu/vuepress-plugin-playground/commit/8a4b854))
+* runtime error using rollup ([c5aee05](https://github.com/AngusFu/vuepress-plugin-playground/commit/c5aee05))
+* try fix unstable errors ([1b596d4](https://github.com/AngusFu/vuepress-plugin-playground/commit/1b596d4))
+
+
+### Features
+
+* better implementation ([1a3bf22](https://github.com/AngusFu/vuepress-plugin-playground/commit/1a3bf22))
+* support `[@demo](https://github.com/demo)` annotation ([c2a5144](https://github.com/AngusFu/vuepress-plugin-playground/commit/c2a5144))
+
+
+
+<a name="2.0.0"></a>
+# [2.0.0](https://github.com/AngusFu/vuepress-plugin-playground/compare/v1.2.0...v2.0.0) (2019-08-25)
+
+
 ### Features
 
 * better implementation ([1a3bf22](https://github.com/AngusFu/vuepress-plugin-playground/commit/1a3bf22))
