@@ -4,8 +4,11 @@ sidebar: auto
 
 # Vuepress Playground Plugin
 
-> 本插件不再维护。建议使用 [vuepress-plugin-demo-code](https://github.com/BuptStEve/vuepress-plugin-demo-code) <br>
-> No longer maintained. [vuepress-plugin-demo-code](https://github.com/BuptStEve/vuepress-plugin-demo-code) is recommended.
+> No longer maintained. 本插件不再维护。 <br>
+> SEE other: <br>
+> - [vuepress-plugin-demo-code](https://github.com/BuptStEve/vuepress-plugin-demo-code)
+> - [vuepress-plugin-demo-block](https://github.com/xiguaxigua/vuepress-plugin-demo-block)
+
 
 
 [![npm status](https://img.shields.io/npm/v/vuepress-plugin-playground.svg)](https://www.npmjs.org/package/vuepress-plugin-playground)
